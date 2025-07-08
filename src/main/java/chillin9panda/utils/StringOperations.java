@@ -16,4 +16,12 @@ public class StringOperations {
   public static String slugify(String input) {
     return input.toLowerCase().replaceAll("[^a-z0-9]", "").replaceAll("\\s+", "").trim();
   }
+
+  public static String extractNumbers(String input) {
+    if (null == input) {
+      return "";
+    }
+
+    return input.replaceAll("[^0-9]", "");
+  }
 }
