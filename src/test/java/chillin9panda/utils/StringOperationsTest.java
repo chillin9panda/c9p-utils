@@ -1,4 +1,4 @@
-package local.chillin9panda.utils;
+package chillin9panda.utils;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

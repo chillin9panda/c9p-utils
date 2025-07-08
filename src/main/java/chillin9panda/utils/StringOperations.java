@@ -1,4 +1,4 @@
-package local.chillin9panda.utils;
+package chillin9panda.utils;
 
 public class StringOperations {
   /**
