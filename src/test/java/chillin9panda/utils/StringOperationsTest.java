@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class StringOperationsTest {
   @Test
-  void slugifyTest() {
+  void testSlugify() {
 
     String[][] testCases = {
         { "Hello world!", "helloworld" },
@@ -23,7 +23,7 @@ public class StringOperationsTest {
   }
 
   @Test
-  void extractNumbers() {
+  void testExtractNumbers() {
     String[][] testCases = {
         { "1h2i3!", "123" },
         { "Java123", "123" },
@@ -36,5 +36,13 @@ public class StringOperationsTest {
 
       assertEquals(expected, StringOperations.extractNumbers(input));
     }
+  }
+
+  @Test
+  void testNormalizeWhiteSpace() {
+    String input = "This   is\tan   example.\nNew lines,  tabs,   and  spaces!";
+    String expected = "This is an example. New lines, tabs, and spaces!";
+
+    assertEquals(expected, StringOperations.normalizeWhitespace(input));
   }
 }
