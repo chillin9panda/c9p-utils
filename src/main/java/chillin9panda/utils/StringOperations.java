@@ -28,4 +28,17 @@ public class StringOperations {
 
     return input.replaceAll("[^0-9]", "");
   }
+
+  /**
+   * @param input String
+   * @return replace multiple whitespace characters with a single space.
+   */
+  public static String normalizeWhitespace(String input) {
+    if (input == null) {
+      return "";
+    }
+
+    return input.trim().replaceAll("\\s+", " ");
+  }
+
 }
